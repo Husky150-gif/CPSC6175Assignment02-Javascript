@@ -1,0 +1,54 @@
+{
+  "name": "week2-javascript-fundamentals",
+  "version": "1.0.0",
+  "description": "Week 2 Assignment: JavaScript Fundamentals for Beginners",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watch --verbose",
+    "test:variables": "jest --testNamePattern=\"Variables\"",
+    "test:functions": "jest --testNamePattern=\"Functions\"",
+    "test:templates": "jest --testNamePattern=\"Templates\"",
+    "test:destructuring": "jest --testNamePattern=\"Destructuring\"",
+    "test:promises": "jest --testNamePattern=\"Promises\"",
+    "test:modules": "jest --testNamePattern=\"Modules\"",
+    "start": "node src/index.js",
+    "lint": "echo 'Linting disabled for beginner assignment'"
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "fundamentals",
+    "beginner",
+    "web-engineering"
+  ],
+  "author": "Web Engineering Course",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.0",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env", 
+        { 
+          "targets": { 
+            "node": "current" 
+          } 
+        }
+      ]
+    ]
+  }
+}
