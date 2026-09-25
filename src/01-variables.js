@@ -26,6 +26,11 @@ export function createUserConfig() {
     // TODO: Create the USER_CONFIG constant here
     // const USER_CONFIG = { ... };
     
+    const USER_CONFIG = {
+    maxLoginAttempts: 3,
+    sessionTimeout: 1800,
+    theme: 'dark'
+};
     return USER_CONFIG;
 }
 
@@ -42,19 +47,17 @@ export function createUserConfig() {
  * @returns {number} Number of active users
  */
 export function countActiveUsers(users) {
-    // TODO: Declare userCount with let (it will change)
-    // let userCount = ?;
-    
-    // TODO: Loop through users and count active ones
-    // for (const user of users) {
-    //     if (user.isActive) {
-    //         userCount++;
-    //     }
-    // }
-    
-    // TODO: Return the count
-    // return userCount;
+    let userCount = 0;
+
+    for (const user of users) {
+        if (user.isActive) {
+            userCount++;
+        }
+    }
+
+    return userCount;
 }
+
 
 /**
  * TODO 3: Demonstrate block scoping
@@ -72,18 +75,15 @@ export function countActiveUsers(users) {
  */
 export function categorizeByAge(age) {
     if (age >= 18) {
-        // TODO: Create a const variable called category with value "adult"
-        // const category = "adult";
-        return category;
-    } else if (age >= 13) {
-        // TODO: Create a const variable called category with value "teen"
-        // const category = "teen";
-        return category;
-    } else {
-        // TODO: Create a const variable called category with value "child"
-        // const category = "child";
-        return category;
-    }
+    const category = "adult";
+    return category;
+} else if (age >= 13) {
+    const category = "teen";
+    return category;
+} else {
+    const category = "child";
+    return category;
+}
     
     // Note: Each 'category' variable exists only in its block {}
     // This is different from 'var' which would cause conflicts!
@@ -98,18 +98,17 @@ export function categorizeByAge(age) {
  * @param {number[]} numbers - Array of numbers to add
  * @returns {number} Sum of all numbers
  */
-export function calculateSum(numbers) {
-    // TODO: Initialize count with let (it will change)
-    // let count = 0;
-    
-    // TODO: Loop through numbers and add each to count
-    // for (const num of numbers) {
-    //     count += num;
-    // }
-    
-    // TODO: Return the final count
-    // return count;
+
+    export function calculateSum(numbers) {
+    let count = 0;
+
+    for (const num of numbers) {
+        count += num;
+    }
+
+    return count;
 }
+
 
 /**
  * EXAMPLE FUNCTION - Already completed to show the pattern

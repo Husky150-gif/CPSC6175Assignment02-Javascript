@@ -21,9 +21,9 @@
  *     return a + b;
  * }
  * 
- * Convert it to: const add = (a, b) => a + b;
+export const add = (a, b) => a + b;
  */
-export const add = null; // TODO: Replace null with your arrow function
+export const add = (a, b) => a + b; // TODO: Replace null with your arrow function
 
 /**
  * TODO 2: Arrow function with default parameter
@@ -35,7 +35,7 @@ export const add = null; // TODO: Replace null with your arrow function
  * 
  * Syntax: const greet = (name = 'Friend') => `Hello, ${name}!`;
  */
-export const greet = null; // TODO: Replace null with your arrow function
+export const greet = (name = 'Friend') => `Hello, ${name}!`; // TODO: Replace null with your arrow function
 
 /**
  * TODO 3: Arrow function for array processing
@@ -48,7 +48,7 @@ export const greet = null; // TODO: Replace null with your arrow function
  * Hint: Use split(' ')[0] to get the first part of a string split by spaces
  * Example: "John Doe".split(' ')[0] returns "John"
  */
-export const getFirstName = null; // TODO: Replace null with your arrow function
+export const getFirstName = (user) => user.fullName.split(' ')[0]; // TODO: Replace null with your arrow function
 
 /**
  * TODO 4: Arrow function with multiple operations
@@ -61,7 +61,10 @@ export const getFirstName = null; // TODO: Replace null with your arrow function
  * Formula: total = price + (price * taxRate)
  * Use Math.round(total * 100) / 100 to round to 2 decimal places
  */
-export const calculateTotalPrice = null; // TODO: Replace null with your arrow function
+export const calculateTotalPrice = (price, taxRate = 0.1) => {
+    const total = price + (price * taxRate);
+    return Math.round(total * 100) / 100;
+}; // TODO: Replace null with your arrow function
 
 /**
  * TODO 5: Arrow function that returns an object
@@ -74,7 +77,11 @@ export const calculateTotalPrice = null; // TODO: Replace null with your arrow f
  * Important: When returning an object with arrow functions, wrap it in parentheses!
  * Syntax: const myFunc = (param) => ({ key: value });
  */
-export const createUser = null; // TODO: Replace null with your arrow function
+export const createUser = (name, email) => ({
+    name,
+    email,
+    id: Math.floor(Math.random() * 1000)
+}); // TODO: Replace null with your arrow function
 
 /**
  * TODO 6: Arrow function for filtering
@@ -84,7 +91,7 @@ export const createUser = null; // TODO: Replace null with your arrow function
  * - Returns true if the email contains '@' and '.', false otherwise
  * - Use includes() method: email.includes('@') returns true if email contains '@'
  */
-export const isValidEmail = null; // TODO: Replace null with your arrow function
+export const isValidEmail = (email) => email.includes('@') && email.includes('.'); // TODO: Replace null with your arrow function
 
 /**
  * EXAMPLE FUNCTIONS - Already completed to show the pattern

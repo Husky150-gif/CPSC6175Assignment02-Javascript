@@ -28,11 +28,8 @@
  * return `Hello ${name}, your email is ${email}`;
  */
 export function extractUserInfo(user) {
-    // TODO: Use object destructuring to extract name and email
-    // const { name, email } = user;
-    
-    // TODO: Return template literal with the extracted values
-    // return `Hello ${name}, your email is ${email}`;
+    const { name, email } = user;
+    return `Hello ${name}, your email is ${email}`;
 }
 
 /**
@@ -44,11 +41,8 @@ export function extractUserInfo(user) {
  * Use destructuring with default values: const { name, role = 'guest' } = user;
  */
 export function getUserRole(user) {
-    // TODO: Destructure name and role (with default value 'guest')
-    // const { name, role = 'guest' } = user;
-    
-    // TODO: Return message with name and role
-    // return `${name} is a ${role}`;
+    const { name, role = 'guest' } = user;
+    return `${name} is a ${role}`;
 }
 
 /**
@@ -62,11 +56,8 @@ export function getUserRole(user) {
  * Nested destructuring: const { address: { city } } = user;
  */
 export function extractUserCity(user) {
-    // TODO: Use nested destructuring to extract city from user.address
-    // const { address: { city } } = user;
-    
-    // TODO: Return message with city
-    // return `User lives in ${city}`;
+    const { address: { city } } = user;
+    return `User lives in ${city}`;
 }
 
 /**
@@ -78,11 +69,8 @@ export function extractUserCity(user) {
  * Array destructuring: const [first, second] = array;
  */
 export function getFirstTwoItems(items) {
-    // TODO: Use array destructuring to get first and second items
-    // const [first, second] = items;
-    
-    // TODO: Return formatted string
-    // return `First: ${first}, Second: ${second}`;
+    const [first, second] = items;
+    return `First: ${first}, Second: ${second}`;
 }
 
 /**
@@ -94,12 +82,8 @@ export function getFirstTwoItems(items) {
  * Syntax: const [first, ...rest] = array;
  */
 export function separateFirstFromRest(numbers) {
-    // TODO: Destructure first number and rest of the array
-    // const [first, ...rest] = numbers;
-    
-    // TODO: Return object with first and rest
-    // return { first: first, rest: rest };
-    // Or using shorthand: return { first, rest };
+    const [first, ...rest] = numbers;
+    return { first, rest };
 }
 
 /**
@@ -112,12 +96,7 @@ export function separateFirstFromRest(numbers) {
  * Use: function formatProduct({ name, price }) { ... }
  */
 export function formatProduct({ name, price, inStock = true }) {
-    // TODO: The destructuring is already done in the parameters above!
-    // Just use the variables directly
-    
-    // TODO: Return formatted string showing product info
-    // Include whether it's in stock or out of stock
-    // return `${name} - ${price} (${inStock ? 'In Stock' : 'Out of Stock'})`;
+    return `${name} - $${price} (${inStock ? 'In Stock' : 'Out of Stock'})`;
 }
 
 /**
@@ -135,11 +114,8 @@ export function formatProduct({ name, price, inStock = true }) {
  * [a, b] = [b, a];
  */
 export function swapValues(a, b) {
-    // TODO: Use array destructuring to swap a and b
-    // [a, b] = [b, a];
-    
-    // TODO: Return the swapped values as an array
-    // return [a, b];
+    [a, b] = [b, a];
+    return [a, b];
 }
 
 /**
